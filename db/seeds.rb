@@ -1,7 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+product1 = Product.create(name: "Men's Los Angeles Lakers Kobe Bryant Jersey", price: 300, image_url: "https://fanatics.frgimages.com/FFImage/thumb.aspx?i=/productimages/_3633000/altimages/ff_3633447-d48aea1b99fa151fc065alt1_full.jpg&w=900", description: "Mitchell & Ness Gold Hardwood Classics 2008-09 Authentic Jersey")
+product2 = Product.create(name: "Men's Denver Broncos Von Miller Jersey", price: 119.99, image_url: "https://fanatics.frgimages.com/FFImage/thumb.aspx?i=/productimages/_3892000/altimages/ff_3892500-21c2313b467c7a69f00ealt1_full.jpg&w=900", description: "Nike Orange Game Jersey")
+product3 = Product.create(name: "Men's Red Sox Chris Sale Jersey", price: 135, image_url: "https://cdn11.bigcommerce.com/s-18e00/images/stencil/original/products/10343/20009/T770-BQWH-BQ7-S41_FR__98986.1606863299.png", description: "Boston Red Sox Replica Adult Home Jersey")
