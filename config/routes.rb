@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get "/kobe", controller: "products", action: "kobe_jersey"
+  get "/all_jerseys", controller: "products", action: "all_product"
+  get "/von_miller", controller: "products", action: "von"
+  get "/chris_sale", controller: "products", action: "chris"
 end
