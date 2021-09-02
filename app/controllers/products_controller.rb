@@ -13,10 +13,11 @@ class ProductsController < ApplicationController
     product = Product.new(
       name: params[:name],
       price: params[:price],
-      image_url: params[:image_url],
       description: params[:description],
+      supplier_id: params[:supplier_id],
     )
     if product.save
+      Image.create(product_id: product.id, url: params[:image_url])
       render json: product
     else
       render json: { errors: product.error.full_messages }, status: 422
