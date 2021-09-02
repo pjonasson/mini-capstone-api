@@ -1,3 +1,15 @@
+### Users create (signup)
+  POST http://localhost:3000/users
+  Content-Type: application/json
+
+  {
+    "name": "Percy Jonasson",
+    "email": "test2@test.com",
+    "password": "password",
+    "password_confirmation": "password"
+  }
+
+###
 post http://localhost:3000/products
 Content-Type: application/json
 
