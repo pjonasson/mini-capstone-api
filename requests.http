@@ -1,45 +1,51 @@
 ### Users create (signup)
   POST http://localhost:3000/users
   Content-Type: application/json
-
   {
-    "name": "Percy Jonasson",
-    "email": "test2@test.com",
+    "name": "Test",
+    "email": "test@test.com",
     "password": "password",
     "password_confirmation": "password"
   }
-###
-
 ### Sessions create (login)
   POST http://localhost:3000/sessions
   Content-Type: application/json
 
   {
-    "email": "test2@test.com",
+    "email": "test@test.com",
     "password": "password"
   }
 
 
-###
-post http://localhost:3000/products
+
+
+
+
+### PRODUCTS INDEX
+GET http://localhost:3000/products.json
 Content-Type: application/json
 
-{"title": }
+### PRODUCTS DESTROY
+DELETE http://localhost:3000/products/8.json
 
-### Orders create
+
+
+
+
+### ORDERS INDEX
+GET http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzE2Mjk3MTZ9.7Fjcw1oKe2PJp615WcaK0MQsKSd3OgSckwzJnaeClng
+
+### ORDERS CREATE
 POST http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzE2Mjk3MTZ9.7Fjcw1oKe2PJp615WcaK0MQsKSd3OgSckwzJnaeClng
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzA3NzE3NTl9.glkGqvbXH7jFPgnIcUaz56uGbTFqJRbbXRUlvBhAS80
 
-  {
-    
-    "product_id": 4,
-    "quantity": 1
-    
-  }
+{
+  "product_id": 2,
+  "quantity": 10
+}
 
-
-### Orders by ID
-GET http://localhost:3000/orders
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzA3NzE3NTl9.glkGqvbXH7jFPgnIcUaz56uGbTFqJRbbXRUlvBhAS80
-
+### ORDERS SHOW
+GET http://localhost:3000/orders/1.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzE2Mjk3MTZ9.7Fjcw1oKe2PJp615WcaK0MQsKSd3OgSckwzJnaeClng
