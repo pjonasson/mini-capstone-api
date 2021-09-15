@@ -70,3 +70,9 @@ Authorization: Bearer {{jwt}}
   "product_id": 3, 
   "quantity": 20
 }
+
+
+### SHOW INDEX FOR CARTED PRODUCTS
+get http://localhost:3000/carted_products
+Content-Type: application/json
+Authorization: Bearer {{jwt}}

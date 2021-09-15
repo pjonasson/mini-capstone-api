@@ -15,4 +15,10 @@ class CartedProductsController < ApplicationController
       render json: { errors: cart.errors.full_message }
     end
   end
+
+  def index
+    cart = CartedProduct.where(user_id: current_user.id).where(status: "Carted")
+
+    render json: cart
+  end
 end
