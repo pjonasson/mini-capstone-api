@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzE2MzE5NzF9.yBmW7YT_pUSY1bp7cRqPR_H2qbBNOgAYFvmIvaA03LE
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzE4MDUxMzF9.iRUwUTjcLCCHs_0J4vloeBRwH-XpAjiPOIaFE4Dyq28
 
 
 
@@ -56,3 +56,17 @@ Content-Type: application/json
 ### ORDERS SHOW
 GET http://localhost:3000/orders/1.json
 Authorization: Bearer {{jwt}}
+
+
+
+### CREATE CART
+
+post http://localhost:3000/carted_products
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+
+{
+  "product_id": 3, 
+  "quantity": 20
+}
