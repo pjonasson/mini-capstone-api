@@ -1,5 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzE4MDUxMzF9.iRUwUTjcLCCHs_0J4vloeBRwH-XpAjiPOIaFE4Dyq28
-
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzE4OTY5NTJ9.t5pshW-GVQRbXpBQtCP_X64qnmBno1wTd1hogSoR1PI
 
 
 ### Users create (signup)
@@ -19,7 +18,7 @@
   Content-Type: application/json
 
   {
-    "email": "admin@test.com",
+    "email": "test@test.com",
     "password": "password"
   }
 
@@ -48,10 +47,7 @@ POST http://localhost:3000/orders.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
-{
-  "product_id": 2,
-  "quantity": 4
-}
+
 
 ### ORDERS SHOW
 GET http://localhost:3000/orders/1.json
@@ -67,8 +63,8 @@ Authorization: Bearer {{jwt}}
 
 
 {
-  "product_id": 3, 
-  "quantity": 20
+  "product_id": 2, 
+  "quantity": 5
 }
 
 
@@ -76,3 +72,10 @@ Authorization: Bearer {{jwt}}
 get http://localhost:3000/carted_products
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
+
+
+### DELETE ITEM FROM CARTED PRODUCTS
+delete http://localhost:3000/carted_products/1.as_json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
