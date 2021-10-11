@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzE4OTY5NTJ9.t5pshW-GVQRbXpBQtCP_X64qnmBno1wTd1hogSoR1PI
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzQwNDg4ODh9.RLJVp3U43R0g_nQuDxh3gDVFlGX8qb2Q0-bLw3nRjGU
 
 
 ### Users create (signup)
@@ -6,8 +6,8 @@
   Content-Type: application/json
 
   {
-    "name": "Admin",
-    "email": "admin@test.com",
+    "name": "user4",
+    "email": "user4@test.com",
     "password": "password",
     "password_confirmation": "password"
   }
@@ -32,7 +32,21 @@ GET http://localhost:3000/products.json
 Content-Type: application/json
 
 ### PRODUCTS DESTROY
-DELETE http://localhost:3000/products/8.json
+DELETE http://localhost:3000/products/5.json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+### PRODUCTS CREATE
+POST http://localhost:3000/products.json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "name": "Test",
+  "price": 100,
+  "description": "Test",
+  "supplier_id": 1
+}
 
 
 
